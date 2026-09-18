@@ -30,13 +30,13 @@ export function WhatsAppButton() {
 
         {/* Soft Ambient Light Halo (Breathing effect matching screenshot) */}
         <span
-          className="absolute inset-0 rounded-full bg-[#25D366]/40 blur-md -z-10 group-hover:bg-[#25D366]/60 group-hover:blur-lg transition-all duration-500 animate-whatsapp-halo"
+          className="pointer-events-none absolute inset-0 rounded-full bg-[#25D366]/40 blur-md -z-10 group-hover:bg-[#25D366]/60 group-hover:blur-lg transition-all duration-500 animate-whatsapp-halo"
           aria-hidden="true"
         />
 
         {/* Outer Ripple Wave on hover */}
         <span
-          className="absolute -inset-1 rounded-full border border-[#25D366]/50 opacity-0 group-hover:opacity-100 animate-ping -z-10 transition-opacity duration-300"
+          className="pointer-events-none absolute -inset-1 rounded-full border border-[#25D366]/50 opacity-0 group-hover:opacity-100 animate-ping -z-10 transition-opacity duration-300"
           aria-hidden="true"
         />
 
