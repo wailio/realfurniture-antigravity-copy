@@ -10,8 +10,16 @@ export function WhatsAppButton() {
   return (
     <aside
       aria-label="Assistance WhatsApp"
-      className="fixed bottom-6 right-6 z-50 h-13 w-13 md:h-14 md:w-14 pointer-events-none"
+      className="group fixed bottom-6 right-6 z-50 h-13 w-13 md:h-14 md:w-14 pointer-events-none"
     >
+      {/* The label is visual-only so nearby page content remains selectable. */}
+      <span
+        className="pointer-events-none absolute right-full top-1/2 mr-3 -translate-y-1/2 whitespace-nowrap rounded-full bg-[#18181B] px-4 py-2 text-xs font-semibold text-white opacity-0 shadow-lg transition-all duration-300 group-hover:-translate-x-1 group-hover:opacity-100"
+        aria-hidden="true"
+      >
+        Discuter avec nous
+      </span>
+
       {/* WhatsApp Floating Button: only this circle receives pointer events */}
       <a
         href={whatsappUrl}
