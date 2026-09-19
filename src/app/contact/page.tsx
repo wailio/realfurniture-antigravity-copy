@@ -124,7 +124,7 @@ function ContactContent() {
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <img
             src="/images/contact-hero.jpg"
-            alt="Château d'art"
+            alt="Souha Meubles"
             className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.6)_40%,rgba(0,0,0,0.2)_75%,transparent_100%)]"
           />
           {/* Smooth Luxury Gradient Overlay seamlessly fading into #0E0F10 */}

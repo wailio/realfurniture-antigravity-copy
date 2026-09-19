@@ -289,7 +289,7 @@ export function ReviewsSection() {
               >
                 <img
                   src="/reviews-chair-lamp-transparent.png"
-                  alt="Fauteuil cuir cognac, plante et lampadaire Château d'art"
+                  alt="Fauteuil cuir cognac, plante et lampadaire Souha Meubles"
                   className="w-full max-w-[530px] h-auto object-contain transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03] drop-shadow-[0_15px_30px_rgba(0,0,0,0.9)] pointer-events-none"
                   draggable={false}
                 />

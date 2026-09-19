@@ -55,7 +55,7 @@ export default function AboutPage() {
             <div className="flex items-center justify-center w-full py-4">
               <img
                 src="/images/chateau-dart-emblem.png"
-                alt="Château d'art - Votre Maison de Luxe"
+                alt="Souha Meubles - Votre Maison de Luxe"
                 className="w-full max-w-[540px] h-auto object-contain transition-transform duration-700 hover:scale-105"
               />
             </div>
@@ -125,7 +125,7 @@ export default function AboutPage() {
             <div className="relative aspect-[4/3] w-full border border-white/10 overflow-hidden shadow-2xl rounded-2xl group">
               <img
                 src="/images/acbd.jpg"
-                alt="Showroom Château d'art - Façade"
+                alt="Showroom Souha Meubles - Façade"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />

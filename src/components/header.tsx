@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Phone, ChevronDown, Menu, X, Check, Instagram, Facebook, Youtube } from 'lucide-react';
+import { Phone, ChevronDown, Menu, X, Check, Instagram, Facebook } from 'lucide-react';
 import { TikTokIcon } from '@/components/icons';
 
 interface HeaderProps {
@@ -57,18 +57,16 @@ export function Header({ theme = 'dark' }: HeaderProps) {
         <div className="max-w-[1440px] mx-auto flex items-center justify-between">
           {/* LEFT: Social Icons — all screens, tiny on mobile */}
           <div className="flex items-center gap-1.5 md:gap-3">
-            <a href="https://www.instagram.com/chateau_dart_meubles/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-[#B7BBC0] hover:text-[#b68d40] transition-colors p-0.5">
+            <a href="https://www.instagram.com/souha_meubles/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-[#B7BBC0] hover:text-[#b68d40] transition-colors p-0.5">
               <Instagram className="w-2.5 h-2.5 md:w-3.5 md:h-3.5" />
             </a>
-            <a href="https://www.facebook.com/chateau.dart.alger/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-[#B7BBC0] hover:text-[#b68d40] transition-colors p-0.5">
+            <a href="https://www.facebook.com/souhacars" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-[#B7BBC0] hover:text-[#b68d40] transition-colors p-0.5">
               <Facebook className="w-2.5 h-2.5 md:w-3.5 md:h-3.5" />
             </a>
-            <a href="https://www.tiktok.com/@chateaudart_meubles" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-[#B7BBC0] hover:text-[#b68d40] transition-colors p-0.5">
+            <a href="https://www.tiktok.com/@souha.meubles" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-[#B7BBC0] hover:text-[#b68d40] transition-colors p-0.5">
               <TikTokIcon className="w-2.5 h-2.5 md:w-3.5 md:h-3.5" />
             </a>
-            <a href="https://www.youtube.com/@chateaudart/featured" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-[#B7BBC0] hover:text-[#b68d40] transition-colors p-0.5 hidden sm:block">
-              <Youtube className="w-2.5 h-2.5 md:w-3.5 md:h-3.5" />
-            </a>
+            
           </div>
 
           {/* RIGHT: Promo text — right on mobile, center on desktop */}
@@ -99,7 +97,7 @@ export function Header({ theme = 'dark' }: HeaderProps) {
             <Link
               href="/contact"
               className="group inline-flex items-center gap-3.5 transition-transform duration-250 ease-out hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b68d40]"
-              aria-label="Besoin d'aide ? 0561 71 91 00"
+              aria-label="Besoin d'aide ? 0770 39 23 59"
             >
               <div
                 className={`w-11 h-11 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-250 ease-out group-hover:bg-[#8f7137] group-hover:text-white group-hover:shadow-[0_6px_18px_rgba(182,141,64,0.38)] ${
@@ -127,7 +125,7 @@ export function Header({ theme = 'dark' }: HeaderProps) {
                       : 'text-[#18181B] group-hover:text-[#8f7137]'
                   }`}
                 >
-                  0561 71 91 00
+                  0770 39 23 59
                 </span>
               </div>
             </Link>
@@ -138,7 +136,7 @@ export function Header({ theme = 'dark' }: HeaderProps) {
             <Link href="/" className="group flex items-center py-0 -my-1.5 md:-my-2.5 lg:-my-3">
               <img
                 src="/logo.png"
-                alt="Château d'art"
+                alt="Souha Meubles"
                 className="h-16 sm:h-18 md:h-22 lg:h-26 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-md"
               />
             </Link>
@@ -376,7 +374,7 @@ export function Header({ theme = 'dark' }: HeaderProps) {
         <div className="md:hidden backdrop-blur-xl bg-[#0A0B0C]/88 border-b border-white/10 px-5 py-4 animate-fade-in shadow-2xl">
           {/* Phone shortcut */}
           <a
-            href="tel:0561719100"
+            href="tel:213770392359"
             onClick={() => setIsMobileMenuOpen(false)}
             className="flex items-center gap-2.5 p-2.5 mb-3 bg-white/5 border border-white/10 rounded-sm"
           >
@@ -385,7 +383,7 @@ export function Header({ theme = 'dark' }: HeaderProps) {
             </div>
             <div>
               <span className="text-[10px] text-[#B7BBC0] block leading-none mb-0.5">Need Help?</span>
-              <span className="text-xs font-bold text-white">0561 71 91 00</span>
+              <span className="text-xs font-bold text-white">0770 39 23 59</span>
             </div>
           </a>
 

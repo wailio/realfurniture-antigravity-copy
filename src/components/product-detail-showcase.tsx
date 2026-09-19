@@ -117,7 +117,7 @@ export function ProductDetailShowcase({ product }: ProductDetailShowcaseProps) {
   ];
 
   const orderSubject = `Commande: ${product.name} (${selectedFinish})`;
-  const orderMessage = `Bonjour Château d'art, je souhaite commander : ${product.name}\n- Finition : ${selectedFinish}\n- Quantité : ${quantity}\n- Prix : ${formatPrice(product.price * quantity)}`;
+  const orderMessage = `Bonjour Souha Meubles, je souhaite commander : ${product.name}\n- Finition : ${selectedFinish}\n- Quantité : ${quantity}\n- Prix : ${formatPrice(product.price * quantity)}`;
   const contactUrl = `/contact?product=${encodeURIComponent(product.name)}&subject=${encodeURIComponent(orderSubject)}&message=${encodeURIComponent(orderMessage)}#contact-form`;
   const whatsappUrl = `https://wa.me/213561719100?text=${encodeURIComponent(orderMessage)}`;
 
@@ -265,7 +265,7 @@ export function ProductDetailShowcase({ product }: ProductDetailShowcaseProps) {
           <div>
             <div className="flex items-center gap-2 text-xs md:text-sm text-[#b68d40] font-semibold tracking-[3px] uppercase mb-1">
               <Sparkles size={13} className="text-[#b68d40]" />
-              <span>{product.brand || "Château d'art"}</span>
+              <span>{product.brand || "Souha Meubles"}</span>
             </div>
             <h1 className="font-fraunces text-xl md:text-2xl font-serif font-bold text-white mb-2 leading-tight">
               {product.name}

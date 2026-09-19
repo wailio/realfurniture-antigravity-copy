@@ -32,11 +32,11 @@ export default function HomePage() {
   };
 
   const categories = [
-    { name: 'Salle à manger', image: '/categories/salle-a-manger.jpg', slug: 'salle-a-manger' },
-    { name: 'Canapés', image: '/categories/canapes.jpg', slug: 'sofas' },
-    { name: 'Chambres', image: '/categories/chambres.jpg', slug: 'chambres' },
-    { name: 'Armoire', image: '/categories/armoire.jpg', slug: 'armoire' },
-    { name: 'Accessoires', image: '/categories/accessoires.jpg', slug: 'accessories' },
+    { name: 'Salle à manger', image: '/products/salle/sl1.jpg', slug: 'salle-a-manger' },
+    { name: 'Canapés', image: '/products/salon/can1.jpg', slug: 'sofas' },
+    { name: 'Chambres', image: '/products/chambre/ch1.jpg', slug: 'chambres' },
+    { name: 'Armoires', image: '/products/armoire/ar1.jpg', slug: 'armoire' },
+    { name: 'Accessoires', image: '/products/accessoire/acc1.jpg', slug: 'accessories' },
   ];
 
   const reviews = [
@@ -97,8 +97,8 @@ export default function HomePage() {
           >
             <span className="inline-flex items-center gap-2 border border-white/20 bg-black/40 backdrop-blur-md px-3 py-1 md:px-4 md:py-1.5 rounded-none text-[9px] md:text-[11px] font-sora text-[#E4E4E7] tracking-[3px] md:tracking-[4px] uppercase shadow-sm">
               <span className="w-1 h-1 md:w-1.5 md:h-1.5 bg-[#b68d40]" />
-              <span className="md:hidden">CHÂTEAU D&apos;ART</span>
-              <span className="hidden md:inline">CHÂTEAU D&apos;ART · MAISON DE DESIGN</span>
+              <span className="md:hidden">SOUHA MEUBLES</span>
+              <span className="hidden md:inline">SOUHA MEUBLES · MOBILIER GARANTI</span>
             </span>
           </div>
           
@@ -388,7 +388,7 @@ export default function HomePage() {
                     <div>
                       <div className="flex items-center justify-between gap-2 mb-1.5">
                         <span className="text-[10px] sm:text-[11px] text-[#b68d40] font-semibold uppercase tracking-[2.5px]">
-                          {product.brand || "Château d'art"}
+                          {product.brand || "Souha Meubles"}
                         </span>
                         <span className="text-[10px] text-[#71717A] tracking-wider uppercase">
                           Prêt à livrer
