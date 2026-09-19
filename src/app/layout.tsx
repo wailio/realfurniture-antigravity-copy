@@ -25,9 +25,9 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Château d'art | Mobilier & Design d'Exception",
+  title: "Souha Meubles | Mobilier pour votre intérieur",
   description:
-    "Maison Château d'art : Mobilier sculptural, boiseries d'art et créations d'exception façonnées pour sublimer vos intérieurs.",
+    "Chez Souha Meubles vous trouverez des produits premiers main garantie et des promotions à tout moment.",
   icons: {
     icon: [
       { url: "/favicon.ico" },

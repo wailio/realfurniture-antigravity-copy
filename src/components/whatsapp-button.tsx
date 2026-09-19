@@ -3,8 +3,8 @@
 import React from 'react';
 
 export function WhatsAppButton() {
-  const phoneNumber = '213561719100';
-  const defaultMessage = "Bonjour Château d'art, je souhaite me renseigner sur vos collections.";
+const phoneNumber = '213770392359';
+const defaultMessage = "Bonjour Souha Meubles, je souhaite me renseigner sur vos collections.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}`;
 
   return (
@@ -25,7 +25,7 @@ export function WhatsAppButton() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Contacter Château d'art sur WhatsApp"
+        aria-label="Contacter Souha Meubles sur WhatsApp"
         className="group relative flex h-full w-full items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_8px_25px_rgba(37,211,102,0.45)] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110 group-hover:-translate-y-1 group-hover:shadow-[0_14px_35px_rgba(37,211,102,0.7)] group-active:scale-95 cursor-pointer pointer-events-auto"
       >
         {/* Soft Ambient Light Halo (Breathing effect matching screenshot) */}

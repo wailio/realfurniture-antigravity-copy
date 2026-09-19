@@ -13,24 +13,24 @@ function ShowroomMap() {
       <div className="flex items-center justify-between px-3.5 py-2.5 bg-[#18191B] border-b border-white/10 text-xs font-sora">
         <div className="flex items-center gap-2">
           <MapPin className="w-3.5 h-3.5 text-[#b68d40]" />
-          <span className="font-semibold text-white text-[11px] md:text-xs">Château D&apos;Art &mdash; Showroom</span>
+          <span className="font-semibold text-white text-[11px] md:text-xs">Souha Meubles &mdash; Showroom</span>
         </div>
         <span className="text-[10px] text-[#A1A1AA]">Alger, Algérie</span>
       </div>
       <div className="relative w-full h-[190px] sm:h-[220px] md:h-[260px] overflow-hidden">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.5906046037494!2d3.060058575713971!3d36.70837457287061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad5fae229a89%3A0xa8afd38ca1b6e44f!2sCh%C3%A2teau%20D'Art%20-%20meubles!5e0!3m2!1sfr!2sdz!4v1789588881010!5m2!1sfr!2sdz" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25587.71888840446!2d3.047157374316395!3d36.711395400000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad003ac3e5f7%3A0x78d7b82d1de54df1!2sSouha%20meubles%20(%20ain%20naadja%20)!5e0!3m2!1sfr!2sdz!4v1789833993537!5m2!1sfr!2sdz" 
           width="100%" 
           height="100%" 
           style={{ border: 0 }} 
           allowFullScreen 
           loading="lazy" 
           referrerPolicy="strict-origin-when-cross-origin" 
-          title="Château D'Art Showroom" 
+          title="Souha Meubles Showroom" 
           className="w-full h-full grayscale contrast-[1.15] brightness-[0.8] hover:grayscale-0 transition-all duration-700" 
         />
         <a 
-          href="https://maps.google.com/?q=Ch%C3%A2teau+D'Art+-+meubles" 
+          href="https://www.google.com/maps/place/Souha+meubles+(+ain+naadja+)/@36.7113954,3.0471574,14z/data=!4m10!1m2!2m1!1ssouha+meubles!3m6!1s0x128fad003ac3e5f7:0x78d7b82d1de54df1!8m2!3d36.7113954!4d3.0852662!15sCg1zb3VoYSBtZXVibGVzkgEPZnVybml0dXJlX3N0b3Jl4AEA!16s%2Fg%2F11vt05gzhg?entry=ttu" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="interactive-tap absolute bottom-3 right-3 z-10 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm bg-[#b68d40] text-white text-[11px] font-semibold hover:bg-[#a37c35] transition-all shadow-lg"
@@ -96,6 +96,23 @@ function ContactContent() {
     e.preventDefault();
     setLoading(true);
 
+    const whatsappMessage = [
+      'Bonjour Souha Meubles, nouvelle demande de contact :',
+      `Nom : ${formData.name}`,
+      `Téléphone : ${formData.phone}`,
+      `Email : ${formData.email}`,
+      `Sujet : ${formData.subject || 'Non précisé'}`,
+      `Message : ${formData.message}`,
+    ].join('\\n');
+    const whatsappWindow = window.open(
+      `https://wa.me/213770392359?text=${encodeURIComponent(whatsappMessage)}`,
+      '_blank',
+      'noopener,noreferrer',
+    );
+    if (whatsappWindow) {
+      whatsappWindow.opener = null;
+    }
+
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -124,7 +141,7 @@ function ContactContent() {
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <img
             src="/images/contact-hero.jpg"
-            alt="Château d'art"
+            alt="Souha Meubles"
             className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.6)_40%,rgba(0,0,0,0.2)_75%,transparent_100%)]"
           />
           {/* Smooth Luxury Gradient Overlay seamlessly fading into #0E0F10 */}
@@ -168,26 +185,26 @@ function ContactContent() {
             <LuxuryReveal className="w-full">
               <div className="grid grid-cols-2 gap-2.5 sm:gap-3.5 w-full">
                 <a 
-                  href="tel:0561719100" 
+                  href="tel:213770392359" 
                   className="interactive-tap group bg-[#121316] border border-white/10 hover:border-[#b68d40]/50 p-3 sm:p-4 md:p-6 flex flex-col items-center text-center rounded-sm transition-all duration-300 shadow-md"
                 >
                   <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#b68d40] mb-2 md:mb-3 group-hover:bg-[#b68d40] group-hover:text-white transition-colors">
                     <Phone size={14} />
                   </div>
                   <h3 className="font-fraunces text-xs md:text-base text-white mb-0.5 leading-tight font-medium">Téléphone</h3>
-                  <p className="font-sora text-[10px] md:text-xs text-[#b68d40] font-bold">0561 71 91 00</p>
+                  <p className="font-sora text-[10px] md:text-xs text-[#b68d40] font-bold">0770 39 23 59</p>
                   <span className="text-[9px] text-[#71717A] mt-1 hidden sm:block">Appel / WhatsApp</span>
                 </a>
 
                 <a 
-                  href="mailto:chateau.art01@gmail.com" 
+                  href="mailto:info@souhameuble.com" 
                   className="interactive-tap group bg-[#121316] border border-white/10 hover:border-[#b68d40]/50 p-3 sm:p-4 md:p-6 flex flex-col items-center text-center rounded-sm transition-all duration-300 shadow-md"
                 >
                   <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#b68d40] mb-2 md:mb-3 group-hover:bg-[#b68d40] group-hover:text-white transition-colors">
                     <Mail size={14} />
                   </div>
                   <h3 className="font-fraunces text-xs md:text-base text-white mb-0.5 leading-tight font-medium">Email</h3>
-                  <p className="font-sora text-[9px] md:text-xs text-white font-medium truncate max-w-[120px] sm:max-w-none">chateau.art01@gmail.com</p>
+                  <p className="font-sora text-[9px] md:text-xs text-white font-medium truncate max-w-[120px] sm:max-w-none">info@souhameuble.com</p>
                   <span className="text-[9px] text-[#71717A] mt-1 hidden sm:block">Réponse 24h</span>
                 </a>
 
@@ -208,7 +225,7 @@ function ContactContent() {
                   </div>
                   <h3 className="font-fraunces text-xs md:text-base text-white mb-0.5 leading-tight font-medium">Horaires</h3>
                   <p className="font-sora text-[10px] md:text-xs text-[#A1A1AA] leading-snug">
-                    6/7j &middot; <span className="text-white font-semibold">09h30 - 20h</span>
+                    6/7j &middot; <span className="text-white font-semibold">09h - 20h</span>
                   </p>
                   <span className="text-[9px] text-[#71717A] mt-1 hidden sm:block">Showroom ouvert</span>
                 </div>
@@ -228,7 +245,7 @@ function ContactContent() {
                   </div>
                 </div>
                 <a 
-                  href="https://wa.me/213561719100" 
+                  href="https://wa.me/213770392359" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="interactive-tap px-3.5 py-2 bg-[#25D366] hover:bg-[#20bd5a] text-white text-[10px] md:text-xs font-bold rounded-sm uppercase tracking-wider flex items-center gap-1.5 flex-shrink-0 transition-colors shadow-sm"
@@ -271,7 +288,7 @@ function ContactContent() {
                   <div className="py-10 text-center space-y-3">
                     <div className="w-11 h-11 rounded-full bg-[#b68d40]/20 border border-[#b68d40] mx-auto flex items-center justify-center text-[#b68d40]"><Check size={22} /></div>
                     <h4 className="font-fraunces text-lg md:text-xl text-white">Message Reçu avec Succès</h4>
-                    <p className="font-sora text-xs text-[#A1A1AA] max-w-md mx-auto">Merci. Un conseiller Château d&apos;art vous contactera très bientôt.</p>
+                    <p className="font-sora text-xs text-[#A1A1AA] max-w-md mx-auto">Merci. Un conseiller Souha Meubles vous contactera très bientôt.</p>
                     <button type="button" onClick={() => setSubmitted(false)} className="interactive-tap text-xs uppercase tracking-wider text-[#b68d40] hover:underline pt-2 inline-block font-semibold">Envoyer un autre message</button>
                   </div>
                 ) : (

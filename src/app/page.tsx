@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { 
   Check, 
@@ -17,12 +17,44 @@ import { Footer } from '@/components/footer';
 import { LuxuryReveal } from '@/components/luxury-reveal';
 import { ProductCard } from '@/components/product-card';
 import { CurvedProductShowcase } from '@/components/curved-product-showcase';
-import { DesignStories } from '@/components/design-stories';
 import { ReviewsSection } from '@/components/reviews-section';
+import dynamic from 'next/dynamic';
+
+const DesignStories = dynamic(
+  () => import('@/components/design-stories').then((module) => module.DesignStories),
+  {
+    ssr: false,
+    loading: () => <div className="h-[720px] w-full bg-[#0E0F10]" aria-hidden="true" />,
+  },
+);
 import { products, formatPrice } from '@/lib/products';
+
+const heroImages = [
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2019%20sept.%202026%2C%2018_48_41-F5IukAxAeGotKIwU3Qi5xMhBTKVtvo.png',
+    alt: 'Salle à manger contemporaine aux finitions dorées',
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2019%20sept.%202026%2C%2018_48_36-ZgGZ6EslNsHUa81ygCEQrpNyAem5YI.png',
+    alt: 'Salon élégant avec canapés et fauteuils en tissu',
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2019%20sept.%202026%2C%2018_48_34-Swn1BrJA8O2ytoSwkPk7EiVMeyvdAC.png',
+    alt: 'Chambre contemporaine avec armoire miroir',
+  },
+] as const;
 
 export default function HomePage() {
   const carouselRef = useRef<HTMLDivElement>(null);
+  const [activeHeroImage, setActiveHeroImage] = useState(0);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveHeroImage((current) => (current + 1) % heroImages.length);
+    }, 4000);
+
+    return () => window.clearInterval(interval);
+  }, []);
 
   const scrollCarousel = (direction: 'left' | 'right') => {
     if (carouselRef.current) {
@@ -32,11 +64,11 @@ export default function HomePage() {
   };
 
   const categories = [
-    { name: 'Salle à manger', image: '/categories/salle-a-manger.jpg', slug: 'salle-a-manger' },
-    { name: 'Canapés', image: '/categories/canapes.jpg', slug: 'sofas' },
-    { name: 'Chambres', image: '/categories/chambres.jpg', slug: 'chambres' },
-    { name: 'Armoire', image: '/categories/armoire.jpg', slug: 'armoire' },
-    { name: 'Accessoires', image: '/categories/accessoires.jpg', slug: 'accessories' },
+    { name: 'Salle à manger', image: '/products/salle/sl1.jpg', slug: 'salle-a-manger' },
+    { name: 'Canapés', image: '/products/salon/can1.jpg', slug: 'sofas' },
+    { name: 'Chambres', image: '/products/chambre/ch1.jpg', slug: 'chambres' },
+    { name: 'Armoires', image: '/products/armoire/ar1.jpg', slug: 'armoire' },
+    { name: 'Accessoires', image: '/products/accessoire/acc1.jpg', slug: 'accessories' },
   ];
 
   const reviews = [
@@ -71,20 +103,24 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-[#0E0F10] font-sans">
-      <Header theme="dark" />
+      <Header theme="dark" stickyOnDesktop />
 
       {/* ── Section 1: Cinematic Hero with Video Background ── */}
       <section className="relative w-full h-[600px] md:h-[750px] lg:h-[880px] overflow-hidden flex items-center justify-center">
-        {/* Background Video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/bgvideo.mp4" type="video/mp4" />
-        </video>
+        {/* Rotating hero imagery: dining, living room, then bedroom. */}
+        <div className="absolute inset-0 bg-[#171311]" aria-label="Galerie de mobilier Souha Meubles">
+          {heroImages.map((image, index) => (
+            <img
+              key={image.src}
+              src={image.src}
+              alt={image.alt}
+              aria-hidden={index !== activeHeroImage}
+              className={`absolute inset-0 h-full w-full object-cover transition-all duration-[1800ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                index === activeHeroImage ? 'scale-100 opacity-100' : 'scale-[1.035] opacity-0'
+              }`}
+            />
+          ))}
+        </div>
 
         {/* Ambient Dark Overlay for Editorial Contrast */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0E0F10]/70 via-[#0E0F10]/50 to-[#0E0F10] z-10 pointer-events-none" />
@@ -97,8 +133,8 @@ export default function HomePage() {
           >
             <span className="inline-flex items-center gap-2 border border-white/20 bg-black/40 backdrop-blur-md px-3 py-1 md:px-4 md:py-1.5 rounded-none text-[9px] md:text-[11px] font-sora text-[#E4E4E7] tracking-[3px] md:tracking-[4px] uppercase shadow-sm">
               <span className="w-1 h-1 md:w-1.5 md:h-1.5 bg-[#b68d40]" />
-              <span className="md:hidden">CHÂTEAU D&apos;ART</span>
-              <span className="hidden md:inline">CHÂTEAU D&apos;ART · MAISON DE DESIGN</span>
+              <span className="md:hidden">SOUHA MEUBLES</span>
+              <span className="hidden md:inline">SOUHA MEUBLES · MOBILIER GARANTI</span>
             </span>
           </div>
           
@@ -141,7 +177,7 @@ export default function HomePage() {
             style={{ animationDelay: '300ms', animationFillMode: 'both' }}
           >
             <p className="font-sora text-xs md:text-base text-white/80 leading-relaxed">
-              Matières nobles, proportions sculpturales et finitions artisanales pensées pour sublimer vos espaces de vie.
+              Chez Souha Meubles vous trouverez des produits premiers main garantie et des promotions à tout moment.
             </p>
           </div>
 
@@ -388,7 +424,7 @@ export default function HomePage() {
                     <div>
                       <div className="flex items-center justify-between gap-2 mb-1.5">
                         <span className="text-[10px] sm:text-[11px] text-[#b68d40] font-semibold uppercase tracking-[2.5px]">
-                          {product.brand || "Château d'art"}
+                          {product.brand || "Souha Meubles"}
                         </span>
                         <span className="text-[10px] text-[#71717A] tracking-wider uppercase">
                           Prêt à livrer

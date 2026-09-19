@@ -169,7 +169,7 @@ export function CurvedProductShowcase() {
         className="pointer-events-none select-none absolute -top-20 -left-32 z-0"
       >
         <img
-          src="/chateau-emblem.png"
+          src="/logo.png"
           alt=""
           draggable={false}
           className="w-[600px] h-[600px] md:w-[800px] md:h-[800px] lg:w-[960px] lg:h-[960px] object-contain"

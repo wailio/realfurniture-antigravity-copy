@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
       finishes: [],
       features: [],
       category,
-      brand: brand || "Château d'art",
+      brand: brand || "Souha Meubles",
       createdAt: new Date().toISOString(),
     };
 

@@ -11,19 +11,19 @@ const inspirations = [
   {
     title: "Le Minimalisme Chaleureux",
     description: "Des lignes épurées et des matériaux nobles pour un intérieur apaisant qui respire l'élégance.",
-    image: "/products/chambre/-1.jpg",
+    image: "/products/chambre/ch1.jpg",
     link: "/all-products?category=chambres",
   },
   {
     title: "L'Art du Salon Moderne",
     description: "Canapés modulables et tables basses graphiques pour créer un espace de vie qui vous ressemble.",
-    image: "/products/salon/aa.jpg",
+    image: "/products/salon/can1.jpg",
     link: "/all-products?category=sofas",
   },
   {
     title: "Recevoir avec Style",
     description: "Salles à manger conçues pour des moments de partage inoubliables autour de belles tables.",
-    image: "/products/salle/11.jpg",
+    image: "/products/salle/sl1.jpg",
     link: "/all-products?category=salle-a-manger",
   },
 ];

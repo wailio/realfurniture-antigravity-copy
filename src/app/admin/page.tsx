@@ -46,7 +46,7 @@ export default function AdminLoginPage() {
             Administration
           </h1>
           <p className="mt-2 text-sm text-[#B7BBC0]">
-            Panneau d&apos;administration Château d&apos;art
+            Panneau d&apos;administration Souha Meubles
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export default function AdminLoginPage() {
         </form>
 
         <p className="mt-8 text-center text-xs text-[#B7BBC0]/50">
-          © 2026 Château d&apos;art. Panneau admin.
+          © 2026 Souha Meubles. Panneau admin.
         </p>
       </div>
     </main>

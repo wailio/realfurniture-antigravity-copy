@@ -20,52 +20,15 @@ export interface Product {
   features?: string[];
 }
 
-export const SALLE_IMAGES = [
-  '/products/salle/11.jpg',
-  '/products/salle/22.jpg',
-  '/products/salle/33.jpg',
-  '/products/salle/44.jpg',
-  '/products/salle/55.jpg',
-  '/products/salle/66.jpg',
-  '/products/salle/77.jpg',
-  '/products/salle/88.jpg',
-  '/products/salle/99.jpg',
-];
+export const SALLE_IMAGES = ['/products/salle/sl1.jpg', '/products/salle/sl2.jpg', '/products/salle/sl3.jpg', '/products/salle/sl4.jpg', '/products/salle/sl5.jpg', '/products/salle/sl6.jpg', '/products/salle/sl7.jpg'];
 
-export const SALON_IMAGES = [
-  '/products/salon/aa.jpg',
-  '/products/salon/bb.jpg',
-  '/products/salon/cc.jpg',
-  '/products/salon/dd.jpg',
-  '/products/salon/ee.jpg',
-  '/products/salon/ff.jpg',
-  '/products/salon/gg.jpg',
-  '/products/salon/hh.jpg',
-  '/products/salon/ii.jpg',
-];
+export const SALON_IMAGES = ['/products/salon/can1.jpg', '/products/salon/can2.jpg', '/products/salon/can3.jpg', '/products/salon/can4.jpg', '/products/salon/can5.jpg', '/products/salon/can6.jpg', '/products/salon/can7.jpg'];
 
-export const CHAMBRE_IMAGES = [
-  '/products/chambre/-1.jpg',
-  '/products/chambre/-2.jpg',
-  '/products/chambre/-3.jpg',
-  '/products/chambre/-4.jpg',
-  '/products/chambre/-5.jpg',
-  '/products/chambre/-6.jpg',
-  '/products/chambre/-8.jpg',
-  '/products/chambre/-9.jpg',
-  '/products/chambre/-99.jpg',
-];
+export const CHAMBRE_IMAGES = ['/products/chambre/ch1.jpg', '/products/chambre/ch2.jpg', '/products/chambre/ch3.jpg', '/products/chambre/ch4.jpg', '/products/chambre/ch5.jpg', '/products/chambre/ch6.jpg', '/products/chambre/ch7.jpg', '/products/chambre/ch8.jpg'];
 
-export const ARMOIRE_IMAGES = [
-  '/products/armoire/ar1.jpg',
-  '/products/armoire/ar2.jpg',
-  '/products/armoire/ar3.jpg',
-];
+export const ARMOIRE_IMAGES = ['/products/armoire/ar1.jpg', '/products/armoire/ar2.jpg'];
 
-export const ACCESSOIRE_IMAGES = [
-  '/products/accessoire/acc1.jpg',
-  '/products/accessoire/acc2.jpg',
-];
+export const ACCESSOIRE_IMAGES = ['/products/accessoire/acc1.jpg', '/products/accessoire/acc2.jpg'];
 
 export const DEFAULT_FINISHES: ProductFinish[] = [
   { name: 'Marron', color: '#5A3D28' },
@@ -80,7 +43,7 @@ export const DEFAULT_FEATURES: string[] = [
   '4 finitions exclusives disponibles : marron noble, blanc pur, ivoire naturel, noir ébène.',
 ];
 
-/* ── Static seed data with authentic Château d'art photos ── */
+/* ── Static seed data with authentic Souha Meubles photos ── */
 export const products: Product[] = [
   {
     id: 1,
@@ -89,10 +52,10 @@ export const products: Product[] = [
     price: 84990,
     originalPrice: 99990,
     discount: 15,
-    image: "/products/salon/aa.jpg",
+    image: "/products/salon/can1.jpg",
     images: SALON_IMAGES,
     category: "sofas",
-    brand: "Château d'art",
+    brand: "Souha Meubles",
     featured: true,
     finishes: DEFAULT_FINISHES,
     features: DEFAULT_FEATURES,
@@ -104,10 +67,10 @@ export const products: Product[] = [
     price: 79990,
     originalPrice: 94990,
     discount: 16,
-    image: "/products/salon/aa.jpg",
+    image: "/products/salon/can1.jpg",
     images: SALON_IMAGES,
     category: "sofas",
-    brand: "Château d'art",
+    brand: "Souha Meubles",
     featured: true,
     finishes: DEFAULT_FINISHES,
     features: DEFAULT_FEATURES,
@@ -119,10 +82,10 @@ export const products: Product[] = [
     price: 72990,
     originalPrice: 86990,
     discount: 16,
-    image: "/products/salon/aa.jpg",
+    image: "/products/salon/can1.jpg",
     images: SALON_IMAGES,
     category: "sofas",
-    brand: "Château d'art",
+    brand: "Souha Meubles",
     featured: true,
     finishes: DEFAULT_FINISHES,
     features: DEFAULT_FEATURES,
@@ -134,10 +97,10 @@ export const products: Product[] = [
     price: 64990,
     originalPrice: 76990,
     discount: 16,
-    image: "/products/salon/aa.jpg",
+    image: "/products/salon/can1.jpg",
     images: SALON_IMAGES,
     category: "sofas",
-    brand: "Château d'art",
+    brand: "Souha Meubles",
     featured: true,
     finishes: DEFAULT_FINISHES,
     features: DEFAULT_FEATURES,
@@ -149,10 +112,10 @@ export const products: Product[] = [
     price: 189990,
     originalPrice: 224990,
     discount: 16,
-    image: "/products/chambre/-1.jpg",
+    image: "/products/chambre/ch1.jpg",
     images: CHAMBRE_IMAGES,
     category: "chambres",
-    brand: "Château d'art",
+    brand: "Souha Meubles",
     featured: true,
     finishes: DEFAULT_FINISHES,
     features: DEFAULT_FEATURES,
@@ -164,10 +127,10 @@ export const products: Product[] = [
     price: 175990,
     originalPrice: 209990,
     discount: 16,
-    image: "/products/chambre/-1.jpg",
+    image: "/products/chambre/ch1.jpg",
     images: CHAMBRE_IMAGES,
     category: "chambres",
-    brand: "Château d'art",
+    brand: "Souha Meubles",
     featured: true,
     finishes: DEFAULT_FINISHES,
     features: DEFAULT_FEATURES,
@@ -179,10 +142,10 @@ export const products: Product[] = [
     price: 58990,
     originalPrice: 69990,
     discount: 16,
-    image: "/products/salle/11.jpg",
+    image: "/products/salle/sl1.jpg",
     images: SALLE_IMAGES,
     category: "salle-a-manger",
-    brand: "Château d'art",
+    brand: "Souha Meubles",
     featured: true,
     finishes: DEFAULT_FINISHES,
     features: [
@@ -198,10 +161,10 @@ export const products: Product[] = [
     price: 119990,
     originalPrice: 142990,
     discount: 16,
-    image: "/products/salle/11.jpg",
+    image: "/products/salle/sl1.jpg",
     images: SALLE_IMAGES,
     category: "salle-a-manger",
-    brand: "Château d'art",
+    brand: "Souha Meubles",
     featured: true,
     finishes: DEFAULT_FINISHES,
     features: DEFAULT_FEATURES,
@@ -216,7 +179,7 @@ export const products: Product[] = [
     image: "/products/armoire/ar1.jpg",
     images: ARMOIRE_IMAGES,
     category: "armoire",
-    brand: "Château d'art",
+    brand: "Souha Meubles",
     featured: true,
     finishes: DEFAULT_FINISHES,
     features: DEFAULT_FEATURES,
@@ -231,7 +194,7 @@ export const products: Product[] = [
     image: "/products/accessoire/acc1.jpg",
     images: ACCESSOIRE_IMAGES,
     category: "accessories",
-    brand: "Château d'art",
+    brand: "Souha Meubles",
     featured: true,
     finishes: DEFAULT_FINISHES,
     features: DEFAULT_FEATURES,
@@ -243,10 +206,10 @@ export const products: Product[] = [
     price: 38990,
     originalPrice: 48000,
     discount: 18,
-    image: "/products/salle/11.jpg",
+    image: "/products/salle/sl1.jpg",
     images: SALLE_IMAGES,
     category: "salle-a-manger",
-    brand: "Château d'art",
+    brand: "Souha Meubles",
     featured: true,
     finishes: DEFAULT_FINISHES,
     features: DEFAULT_FEATURES,
@@ -258,10 +221,10 @@ export const products: Product[] = [
     price: 195000,
     originalPrice: 230000,
     discount: 15,
-    image: "/products/chambre/-1.jpg",
+    image: "/products/chambre/ch1.jpg",
     images: CHAMBRE_IMAGES,
     category: "chambres",
-    brand: "Château d'art",
+    brand: "Souha Meubles",
     featured: true,
     finishes: DEFAULT_FINISHES,
     features: DEFAULT_FEATURES,
@@ -276,7 +239,7 @@ export const products: Product[] = [
     image: "/products/armoire/ar1.jpg",
     images: ARMOIRE_IMAGES,
     category: "armoire",
-    brand: "Château d'art",
+    brand: "Souha Meubles",
     featured: true,
     finishes: DEFAULT_FINISHES,
     features: DEFAULT_FEATURES,
@@ -291,7 +254,7 @@ export const products: Product[] = [
     image: "/products/accessoire/acc1.jpg",
     images: ACCESSOIRE_IMAGES,
     category: "accessories",
-    brand: "Château d'art",
+    brand: "Souha Meubles",
     featured: true,
     finishes: DEFAULT_FINISHES,
     features: DEFAULT_FEATURES,
