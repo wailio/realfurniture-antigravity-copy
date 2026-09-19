@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Instagram, Facebook, Youtube, ArrowUpRight } from 'lucide-react';
+import { Instagram, Facebook, ArrowUpRight } from 'lucide-react';
 import { LuxuryReveal } from '@/components/luxury-reveal';
 
 function TikTokIcon({ className = 'w-5 h-5' }: { className?: string }) {
@@ -46,14 +46,6 @@ const stories: StoryItem[] = [
     video: '/videos/tiktok-vd.mp4',
     icon: TikTokIcon,
     link: 'https://www.tiktok.com/@chateaudart_meubles',
-  },
-  {
-    id: 'youtube',
-    name: 'YouTube',
-    handle: '@chateaudart',
-    video: '/videos/youtube-vd.mp4',
-    icon: Youtube,
-    link: 'https://www.youtube.com/@chateaudart/featured',
   },
 ];
 
