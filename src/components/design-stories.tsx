@@ -50,6 +50,7 @@ const stories: StoryItem[] = [
 ];
 
 export function DesignStories() {
+  // Video cards are rendered by the client-only boundary in the homepage.
   return (
     <section className="relative w-full py-20 md:py-32 bg-[#0E0F10] border-t border-white/10 overflow-hidden font-sora">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
