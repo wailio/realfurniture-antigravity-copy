@@ -7,9 +7,10 @@ import { TikTokIcon } from '@/components/icons';
 
 interface HeaderProps {
   theme?: 'dark' | 'light';
+  stickyOnDesktop?: boolean;
 }
 
-export function Header({ theme = 'dark' }: HeaderProps) {
+export function Header({ theme = 'dark', stickyOnDesktop = false }: HeaderProps) {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
@@ -51,7 +52,7 @@ export function Header({ theme = 'dark' }: HeaderProps) {
   const isDark = theme === 'dark';
 
   return (
-    <header className="sticky top-0 w-full z-50 shadow-md font-sora transition-colors duration-300">
+    <header className={`${stickyOnDesktop ? 'md:sticky md:top-0' : ''} w-full z-50 shadow-md font-sora transition-colors duration-300`}>
       {/* ── ROW 1: Top Promo Bar (Dark, Full Width, with Socials on Left) ── */}
       <div className="bg-[#0A0B0C] text-[#F2F1EF] text-xs py-1.5 px-4 sm:px-6 md:px-10 lg:px-12 border-b border-white/5">
         <div className="max-w-[1440px] mx-auto flex items-center justify-between">
