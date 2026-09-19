@@ -96,7 +96,11 @@ export function DesignStories() {
                       playsInline
                       preload="metadata"
                       onError={(event) => {
-                        event.currentTarget.style.display = 'none'
+                        const video = event.currentTarget
+                        video.pause()
+                        video.removeAttribute('src')
+                        video.load()
+                        video.setAttribute('aria-hidden', 'true')
                       }}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
                     />
