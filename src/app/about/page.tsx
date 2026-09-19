@@ -54,7 +54,7 @@ export default function AboutPage() {
           <LuxuryReveal variant="right" delay={200}>
             <div className="flex items-center justify-center w-full py-4">
               <img
-                src="/logo.png"
+                src="/images/smsm.jpg"
                 alt="Souha Meubles - Votre Maison de Luxe"
                 className="w-full max-w-[540px] h-auto object-contain transition-transform duration-700 hover:scale-105"
               />
@@ -124,7 +124,7 @@ export default function AboutPage() {
           <LuxuryReveal variant="left">
             <div className="relative aspect-[4/3] w-full border border-white/10 overflow-hidden shadow-2xl rounded-2xl group">
               <img
-                src="/images/acbd.jpg"
+                src="/images/his.png"
                 alt="Showroom Souha Meubles - Façade"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />

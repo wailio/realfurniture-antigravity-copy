@@ -17,7 +17,7 @@ interface StoryItem {
   id: string;
   name: string;
   handle: string;
-  image: string;
+  video: string;
   icon: React.ComponentType<{ className?: string }>;
   link: string;
 }
@@ -27,7 +27,7 @@ const stories: StoryItem[] = [
     id: 'instagram',
     name: 'Instagram',
     handle: '@souha_meubles',
-    image: '/products/salon/can1.jpg',
+    video: '/videos/instavid.mp4',
     icon: Instagram,
     link: 'https://www.instagram.com/souha_meubles/',
   },
@@ -35,7 +35,7 @@ const stories: StoryItem[] = [
     id: 'facebook',
     name: 'Facebook',
     handle: '@souhacars',
-    image: '/products/salle/sl1.jpg',
+    video: '/videos/fbvid.mp4',
     icon: Facebook,
     link: 'https://www.facebook.com/souhacars',
   },
@@ -43,7 +43,7 @@ const stories: StoryItem[] = [
     id: 'tiktok',
     name: 'TikTok',
     handle: '@souha.meubles',
-    image: '/products/chambre/ch1.jpg',
+    video: '/videos/tiktokvid.mp4',
     icon: TikTokIcon,
     link: 'https://www.tiktok.com/@souha.meubles',
   },
@@ -70,7 +70,7 @@ export function DesignStories() {
 
         {/* 4 Story Video Shapes Container (Sideways scrollable on mobile, 4-col grid on desktop) */}
         <div className="relative">
-          <div className="flex lg:grid lg:grid-cols-4 overflow-x-auto lg:overflow-visible gap-5 lg:gap-6 pb-6 pt-2 px-2 sm:px-4 lg:px-0 snap-x snap-mandatory scrollbar-hide">
+          <div className="flex lg:grid lg:grid-cols-3 max-w-5xl mx-auto lg:translate-x-4 overflow-x-auto lg:overflow-visible gap-5 lg:gap-6 pb-6 pt-2 px-2 sm:px-4 lg:px-0 snap-x snap-mandatory scrollbar-hide">
             {stories.map((story, idx) => {
               const IconComponent = story.icon;
               return (
@@ -86,9 +86,17 @@ export function DesignStories() {
                     aria-label={`Voir nos créations sur ${story.name}`}
                     className="story-item group relative block h-[400px] sm:h-[450px] lg:h-[510px] w-full rounded-[24px] overflow-hidden border border-white/10 hover:border-[#b68d40]/60 transition-all duration-500 shadow-2xl bg-[#141518]"
                   >
-                    <img
-                      src={story.image}
-                      alt={`${story.name} — inspirations Souha Meubles`}
+                    <video
+                      src={story.video}
+                      aria-label={`${story.name} — inspirations Souha Meubles`}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                      onError={(event) => {
+                        event.currentTarget.style.display = 'none'
+                      }}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
                     />
 
