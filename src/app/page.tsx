@@ -103,7 +103,7 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-[#0E0F10] font-sans">
-      <Header theme="dark" stickyOnDesktop />
+      <Header theme="dark" />
 
       {/* ── Section 1: Cinematic Hero with Video Background ── */}
       <section className="relative w-full h-[600px] md:h-[750px] lg:h-[880px] overflow-hidden flex items-center justify-center">
