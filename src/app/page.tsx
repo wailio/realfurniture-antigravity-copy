@@ -18,7 +18,15 @@ import { LuxuryReveal } from '@/components/luxury-reveal';
 import { ProductCard } from '@/components/product-card';
 import { CurvedProductShowcase } from '@/components/curved-product-showcase';
 import { ReviewsSection } from '@/components/reviews-section';
-import { DesignStories } from '@/components/design-stories';
+import dynamic from 'next/dynamic';
+
+const DesignStories = dynamic(
+  () => import('@/components/design-stories').then((module) => module.DesignStories),
+  {
+    ssr: false,
+    loading: () => <div className="h-[720px] w-full bg-[#0E0F10]" aria-hidden="true" />,
+  },
+);
 import { products, formatPrice } from '@/lib/products';
 
 export default function HomePage() {
