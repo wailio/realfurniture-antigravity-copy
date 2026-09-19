@@ -54,7 +54,7 @@ export default function AboutPage() {
           <LuxuryReveal variant="right" delay={200}>
             <div className="flex items-center justify-center w-full py-4">
               <img
-                src="/images/smsm.jpg"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2019%20sept.%202026%2C%2018_38_20-Z3cVRzOga2wjTvZ2rH32fssqA8Qzyx.png"
                 alt="Souha Meubles - Votre Maison de Luxe"
                 className="w-full max-w-[540px] h-auto object-contain transition-transform duration-700 hover:scale-105"
               />
