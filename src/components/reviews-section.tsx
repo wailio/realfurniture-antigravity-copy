@@ -15,10 +15,10 @@ export interface GoogleReviewItem {
 }
 
 export const REVIEWS_LIVORA_DATA: GoogleReviewItem[] = [
-  { name: 'Tawfiq Oumessad', role: 'Client Google', avatarLetter: 'T', avatarBg: '#475569', rating: 5, text: "Un beau magasin des beau produits prix abordable et des gens sympa je recommande.", timeAgo: 'il y a un an' },
+  { name: 'Tawfiq Oumessad', role: 'Client Google', avatarLetter: 'T', avatarBg: '#475569', rating: 5, text: 'Un beau magasin des beau produits prix abordable et des gens sympa je recommande.', timeAgo: 'il y a un an' },
   { name: 'Zakaria Ouabdessalam', role: 'Client Google · 8 photos', avatarLetter: 'Z', avatarBg: '#94a3b8', rating: 5, text: 'Très bonne qualité de meuble.', timeAgo: 'il y a 11 mois' },
   { name: 'safia', role: 'Client Google', avatarLetter: 'S', avatarBg: '#987b70', rating: 4, text: 'T bien.', timeAgo: 'il y a un mois' },
-  { name: 'HASSIBA LALLAM', role: 'Client Google · 2 avis', avatarLetter: 'H', avatarBg: '#be185d', rating: 5, text: "Je tiens à exprimer ma sincère gratitude à Souha Furniture pour leur excellent service et leur accueil chaleureux. Leur interaction a été plus que merveilleuse. Ils ont fait preuve d'un grand respect et d'un grand professionnalisme, ce qui ...", timeAgo: 'il y a un an' },
+  { name: 'HASSIBA LALLAM', role: 'Client Google · 2 avis', avatarLetter: 'H', avatarBg: '#be185d', rating: 5, text: "Je tiens à exprimer ma sincère gratitude à Souha Furniture pour leur excellent service et leur accueil chaleureux. Leur interaction a été plus que merveilleuse. Ils ont fait preuve d'un grand respect et d'un grand professionnalisme.", timeAgo: 'il y a un an' },
   { name: 'Islem Bouzidi', role: 'Client Google · 2 avis', avatarLetter: 'I', avatarBg: '#64748b', rating: 5, text: "Un magasin de meubles modernes et classiques proposant une grande variété de pièces uniques et d'ensembles de salon originaux, avec un service client exceptionnel et une équipe spécialisée dans le montage de tous types de bois, livraison à domicile incluse. Un grand merci à toute l'équipe !", timeAgo: 'il y a un an' },
   { name: 'أبو عبد الله محمد زكريا باشاوم الجزائري', role: 'Client Google · 2 avis', avatarLetter: 'أ', avatarBg: '#1f2937', rating: 5, text: 'Avis Google vérifié.', timeAgo: 'il y a 2 mois' },
   { name: 'khadidja Si di madani', role: 'Client Google', avatarLetter: 'K', avatarBg: '#be185d', rating: 5, text: 'Avis Google vérifié.', timeAgo: 'il y a 8 mois' },
@@ -170,7 +170,7 @@ export function ReviewsSection() {
         {/* ═════════════════════════════════════════════════════════════════��════
             DESKTOP VIEW: EXACT LIVORA PIXEL-BY-PIXEL ARCHITECTURE
             Both left (chair) and right (review) are fully mouse draggable & swipable!
-            ══════════════════════════════════════════════════════════════════════ */}
+            ═════════════════��════════════════════════════════════════════════════ */}
         <div className="hidden lg:grid lg:grid-cols-12 gap-8 xl:gap-14 items-center">
           
           {/* ── Left Column: Transparent Cutout Image directly on background (Draggable with cursor-grab) ── */}
