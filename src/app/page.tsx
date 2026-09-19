@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef } from 'react';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { 
   Check, 
@@ -17,8 +18,12 @@ import { Footer } from '@/components/footer';
 import { LuxuryReveal } from '@/components/luxury-reveal';
 import { ProductCard } from '@/components/product-card';
 import { CurvedProductShowcase } from '@/components/curved-product-showcase';
-import { DesignStories } from '@/components/design-stories';
 import { ReviewsSection } from '@/components/reviews-section';
+
+const DesignStories = dynamic(
+  () => import('@/components/design-stories').then((module) => module.DesignStories),
+  { ssr: false },
+);
 import { products, formatPrice } from '@/lib/products';
 
 export default function HomePage() {
