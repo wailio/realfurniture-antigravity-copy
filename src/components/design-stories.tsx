@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Instagram, Facebook, ArrowUpRight } from 'lucide-react';
 import { LuxuryReveal } from '@/components/luxury-reveal';
@@ -50,6 +50,12 @@ const stories: StoryItem[] = [
 ];
 
 export function DesignStories() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     <section className="relative w-full py-20 md:py-32 bg-[#0E0F10] border-t border-white/10 overflow-hidden font-sora">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,7 +77,7 @@ export function DesignStories() {
         {/* 4 Story Video Shapes Container (Sideways scrollable on mobile, 4-col grid on desktop) */}
         <div className="relative">
           <div className="flex lg:grid lg:grid-cols-3 max-w-5xl mx-auto lg:translate-x-4 overflow-x-auto lg:overflow-visible gap-5 lg:gap-6 pb-6 pt-2 px-2 sm:px-4 lg:px-0 snap-x snap-mandatory scrollbar-hide">
-            {stories.map((story, idx) => {
+            {isMounted && stories.map((story, idx) => {
               const IconComponent = story.icon;
               return (
                 <LuxuryReveal 
