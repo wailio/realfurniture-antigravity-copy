@@ -21,7 +21,7 @@ import { CurvedProductShowcase } from '@/components/curved-product-showcase';
 import { ReviewsSection } from '@/components/reviews-section';
 
 const DesignStories = dynamic(
-  () => import('@/components/design-stories').then((module) => module.DesignStories),
+  () => import('@/components/design-stories-v2').then((module) => module.DesignStories),
   { ssr: false },
 );
 import { products, formatPrice } from '@/lib/products';
