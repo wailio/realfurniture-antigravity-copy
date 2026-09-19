@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { 
   Check, 
@@ -29,8 +29,32 @@ const DesignStories = dynamic(
 );
 import { products, formatPrice } from '@/lib/products';
 
+const heroImages = [
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2019%20sept.%202026%2C%2018_48_41-F5IukAxAeGotKIwU3Qi5xMhBTKVtvo.png',
+    alt: 'Salle à manger contemporaine aux finitions dorées',
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2019%20sept.%202026%2C%2018_48_36-ZgGZ6EslNsHUa81ygCEQrpNyAem5YI.png',
+    alt: 'Salon élégant avec canapés et fauteuils en tissu',
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2019%20sept.%202026%2C%2018_48_34-Swn1BrJA8O2ytoSwkPk7EiVMeyvdAC.png',
+    alt: 'Chambre contemporaine avec armoire miroir',
+  },
+] as const;
+
 export default function HomePage() {
   const carouselRef = useRef<HTMLDivElement>(null);
+  const [activeHeroImage, setActiveHeroImage] = useState(0);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveHeroImage((current) => (current + 1) % heroImages.length);
+    }, 4000);
+
+    return () => window.clearInterval(interval);
+  }, []);
 
   const scrollCarousel = (direction: 'left' | 'right') => {
     if (carouselRef.current) {
@@ -83,12 +107,20 @@ export default function HomePage() {
 
       {/* ── Section 1: Cinematic Hero with Video Background ── */}
       <section className="relative w-full h-[600px] md:h-[750px] lg:h-[880px] overflow-hidden flex items-center justify-center">
-        {/* Background Video */}
-        <img
-        src="/images/contact-hero.jpg"
-        alt="Collection de mobilier Souha Meubles"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+        {/* Rotating hero imagery: dining, living room, then bedroom. */}
+        <div className="absolute inset-0 bg-[#171311]" aria-label="Galerie de mobilier Souha Meubles">
+          {heroImages.map((image, index) => (
+            <img
+              key={image.src}
+              src={image.src}
+              alt={image.alt}
+              aria-hidden={index !== activeHeroImage}
+              className={`absolute inset-0 h-full w-full object-cover transition-all duration-[1800ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                index === activeHeroImage ? 'scale-100 opacity-100' : 'scale-[1.035] opacity-0'
+              }`}
+            />
+          ))}
+        </div>
 
         {/* Ambient Dark Overlay for Editorial Contrast */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0E0F10]/70 via-[#0E0F10]/50 to-[#0E0F10] z-10 pointer-events-none" />
