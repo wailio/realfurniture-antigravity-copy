@@ -9,7 +9,7 @@ export function Footer() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
   const handleSubscribe = (e: React.FormEvent) => { e.preventDefault(); if (!email.trim()) return; setSubscribed(true); setEmail(''); };
-  const mapSrc = 'https://www.google.com/maps?q=Souha+Meubles+Ain+Naadja+Alger&output=embed';
+  const mapSrc = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25587.71888840446!2d3.047157374316395!3d36.711395400000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad003ac3e5f7%3A0x78d7b82d1de54df1!2sSouha%20meubles%20(%20ain%20naadja%20)!5e0!3m2!1sfr!2sdz!4v1789833993537!5m2!1sfr!2sdz';
   return (
     <footer className='bg-[#0A0B0C] text-[#B7BBC0] font-sora border-t border-white/10'>
       {/* ── MOBILE FOOTER ── */}

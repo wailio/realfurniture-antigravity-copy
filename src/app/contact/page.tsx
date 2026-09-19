@@ -19,7 +19,7 @@ function ShowroomMap() {
       </div>
       <div className="relative w-full h-[190px] sm:h-[220px] md:h-[260px] overflow-hidden">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.5906046037494!2d3.060058575713971!3d36.70837457287061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad5fae229a89%3A0xa8afd38ca1b6e44f!2sCh%C3%A2teau%20D'Art%20-%20meubles!5e0!3m2!1sfr!2sdz!4v1789588881010!5m2!1sfr!2sdz" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25587.71888840446!2d3.047157374316395!3d36.711395400000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad003ac3e5f7%3A0x78d7b82d1de54df1!2sSouha%20meubles%20(%20ain%20naadja%20)!5e0!3m2!1sfr!2sdz!4v1789833993537!5m2!1sfr!2sdz" 
           width="100%" 
           height="100%" 
           style={{ border: 0 }} 

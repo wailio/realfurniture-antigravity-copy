@@ -15,123 +15,18 @@ export interface GoogleReviewItem {
 }
 
 export const REVIEWS_LIVORA_DATA: GoogleReviewItem[] = [
-  {
-    name: 'Samah Silini',
-    role: 'Acheteuse vérifiée · 3 avis',
-    avatarLetter: 'S',
-    avatarBg: '#0b5c92',
-    rating: 5,
-    text: "Magnifique magasin, l'accueil est chaleureux le monsieur très dispo et ils sont très sérieux j'ai adorée ma première expérience avec eux.",
-    timeAgo: 'il y a 5 ans'
-  },
-  {
-    name: 'Mami Faouzi',
-    role: 'Local Guide · 125 avis · 63 photos',
-    avatarLetter: 'M',
-    avatarBg: '#8f7137',
-    rating: 5,
-    text: "Très bel endroit. Qualité des salons et des finitions irréprochable, mobilier haut de gamme remarquable.",
-    timeAgo: 'il y a 6 ans'
-  },
-  {
-    name: 'Kenza Kernane',
-    role: 'Cliente fidèle · 7 avis',
-    avatarLetter: 'K',
-    avatarBg: '#2e6930',
-    rating: 5,
-    text: "Magnifique. Le raffinement et la solidité des matières en font l'adresse de référence pour meubler sa maison.",
-    timeAgo: 'il y a 2 ans'
-  },
-  {
-    name: 'fathi chaalane',
-    role: 'Local Guide · 1 avis · 15 photos',
-    avatarLetter: 'F',
-    avatarBg: '#4a5d4e',
-    rating: 5,
-    text: "Très beaux meubles design, finitions parfaites et accueil très professionnel.",
-    timeAgo: 'il y a 2 mois'
-  },
-  {
-    name: 'Bouchra O',
-    role: 'Local Guide · 25 avis · 10 photos',
-    avatarLetter: 'B',
-    avatarBg: '#6b21a8',
-    rating: 5,
-    text: "Très satisfaite de ma commande. Les meubles sont exceptionnels et l'accompagnement était parfait.",
-    timeAgo: 'il y a 4 ans'
-  },
-  {
-    name: 'ADEL BOUGUI',
-    role: 'Local Guide · 22 avis · 145 photos',
-    avatarLetter: 'A',
-    avatarBg: '#c2410c',
-    rating: 5,
-    text: "Un showroom d'exception avec des pièces uniques et une qualité de conception remarquable.",
-    timeAgo: 'il y a 4 ans'
-  },
-  {
-    name: 'Hakim Lounes',
-    role: 'Local Guide · 10 avis · 1 photo',
-    avatarLetter: 'H',
-    avatarBg: '#b91c1c',
-    rating: 5,
-    text: "Excellente qualité de meubles et personnel très accueillant et à l'écoute.",
-    timeAgo: 'il y a 8 mois'
-  },
-  {
-    name: 'mouloud karahaçane',
-    role: 'Local Guide · 7 avis · 66 photos',
-    avatarLetter: 'M',
-    avatarBg: '#475569',
-    rating: 5,
-    text: "Produits haut de gamme et service impeccable du premier contact jusqu'à la livraison.",
-    timeAgo: 'il y a 9 mois'
-  },
-  {
-    name: 'Walid Chair',
-    role: 'Client vérifié · 2 avis · 1 photo',
-    avatarLetter: 'W',
-    avatarBg: '#1e3a8a',
-    rating: 5,
-    text: "Qualité au top et équipe très professionnelle.",
-    timeAgo: 'il y a 5 ans'
-  },
-  {
-    name: 'Monde Events',
-    role: 'Local Guide · 7 avis · 11 photos',
-    avatarLetter: 'M',
-    avatarBg: '#0f766e',
-    rating: 5,
-    text: "Grand choix de mobilier contemporain de luxe, élégant et soigné.",
-    timeAgo: 'il y a 10 mois'
-  },
-  {
-    name: 'Mehdi BM',
-    role: 'Local Guide · 18 avis · 1 photo',
-    avatarLetter: 'M',
-    avatarBg: '#0284c7',
-    rating: 5,
-    text: "Service et finitions de très haute qualité.",
-    timeAgo: 'il y a 4 ans'
-  },
-  {
-    name: 'Souami Nasreddine',
-    role: 'Local Guide · 17 avis · 345 photos',
-    avatarLetter: 'S',
-    avatarBg: '#0369a1',
-    rating: 4,
-    text: "Très bon magasin avec de belles collections contemporaines.",
-    timeAgo: 'il y a 11 mois'
-  },
-  {
-    name: 'aknine Brahim',
-    role: 'Local Guide · 185 avis · 298 photos',
-    avatarLetter: 'A',
-    avatarBg: '#ca8a04',
-    rating: 4,
-    text: "Superbe showroom et conseils personnalisés pour chaque pièce.",
-    timeAgo: 'il y a 2 ans'
-  }
+  { name: 'Tawfiq Oumessad', role: 'Client Google', avatarLetter: 'T', avatarBg: '#475569', rating: 5, text: "Un beau magasin des beau produits prix abordable et des gens sympa je recommande.", timeAgo: 'il y a un an' },
+  { name: 'Zakaria Ouabdessalam', role: 'Client Google · 8 photos', avatarLetter: 'Z', avatarBg: '#94a3b8', rating: 5, text: 'Très bonne qualité de meuble.', timeAgo: 'il y a 11 mois' },
+  { name: 'safia', role: 'Client Google', avatarLetter: 'S', avatarBg: '#987b70', rating: 4, text: 'T bien.', timeAgo: 'il y a un mois' },
+  { name: 'HASSIBA LALLAM', role: 'Client Google · 2 avis', avatarLetter: 'H', avatarBg: '#be185d', rating: 5, text: "Je tiens à exprimer ma sincère gratitude à Souha Furniture pour leur excellent service et leur accueil chaleureux. Leur interaction a été plus que merveilleuse. Ils ont fait preuve d'un grand respect et d'un grand professionnalisme, ce qui ...", timeAgo: 'il y a un an' },
+  { name: 'Islem Bouzidi', role: 'Client Google · 2 avis', avatarLetter: 'I', avatarBg: '#64748b', rating: 5, text: "Un magasin de meubles modernes et classiques proposant une grande variété de pièces uniques et d'ensembles de salon originaux, avec un service client exceptionnel et une équipe spécialisée dans le montage de tous types de bois, livraison à domicile incluse. Un grand merci à toute l'équipe !", timeAgo: 'il y a un an' },
+  { name: 'أبو عبد الله محمد زكريا باشاوم الجزائري', role: 'Client Google · 2 avis', avatarLetter: 'أ', avatarBg: '#1f2937', rating: 5, text: 'Avis Google vérifié.', timeAgo: 'il y a 2 mois' },
+  { name: 'khadidja Si di madani', role: 'Client Google', avatarLetter: 'K', avatarBg: '#be185d', rating: 5, text: 'Avis Google vérifié.', timeAgo: 'il y a 8 mois' },
+  { name: 'Mouss Kobayachi', role: 'Local Guide · 31 avis · 3 photos', avatarLetter: 'M', avatarBg: '#65a30d', rating: 5, text: 'Avis Google vérifié.', timeAgo: 'il y a 11 mois' },
+  { name: 'Marouane Boukeloud', role: 'Client Google', avatarLetter: 'M', avatarBg: '#475569', rating: 5, text: 'Avis Google vérifié.', timeAgo: 'il y a un an' },
+  { name: 'Yakoub Boukeloud', role: 'Client Google', avatarLetter: 'Y', avatarBg: '#ea580c', rating: 5, text: 'Avis Google vérifié.', timeAgo: 'il y a un an' },
+  { name: 'machou nassim', role: 'Client Google · 4 photos', avatarLetter: 'm', avatarBg: '#b91c1c', rating: 5, text: 'Avis Google vérifié.', timeAgo: 'il y a un an' },
+  { name: 'Oussama Mahfoud', role: 'Client Google · 5 avis · 8 photos', avatarLetter: 'O', avatarBg: '#0891b2', rating: 5, text: 'Avis Google vérifié.', timeAgo: 'il y a un an' }
 ];
 
 export function ReviewsSection() {
