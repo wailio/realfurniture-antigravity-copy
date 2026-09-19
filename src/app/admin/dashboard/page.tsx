@@ -159,7 +159,7 @@ export default function AdminDashboard() {
               Administration
             </h1>
             <span className="hidden text-xs text-[#B7BBC0]/60 sm:inline">
-              Château d&apos;art
+              Souha Meubles
             </span>
           </div>
           <div className="flex items-center gap-3">

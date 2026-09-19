@@ -26,26 +26,26 @@ const stories: StoryItem[] = [
   {
     id: 'instagram',
     name: 'Instagram',
-    handle: '@chateau_dart_meubles',
+    handle: '@souha_meubles',
     video: '/videos/instagram-vd.mp4',
     icon: Instagram,
-    link: 'https://www.instagram.com/chateau_dart_meubles/',
+    link: 'https://www.instagram.com/souha_meubles/',
   },
   {
     id: 'facebook',
     name: 'Facebook',
-    handle: '@chateau.dart.alger',
+    handle: '@souhacars',
     video: '/videos/facebook-vd.mp4',
     icon: Facebook,
-    link: 'https://www.facebook.com/chateau.dart.alger/',
+    link: 'https://www.facebook.com/souhacars',
   },
   {
     id: 'tiktok',
     name: 'TikTok',
-    handle: '@chateaudart_meubles',
+    handle: '@souha.meubles',
     video: '/videos/tiktok-vd.mp4',
     icon: TikTokIcon,
-    link: 'https://www.tiktok.com/@chateaudart_meubles',
+    link: 'https://www.tiktok.com/@souha.meubles',
   },
 ];
 

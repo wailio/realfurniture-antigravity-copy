@@ -110,7 +110,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                       <div className="p-2 sm:p-2.5 flex-1 flex flex-col justify-between font-sora">
                         <div>
                           <p className="text-[8px] md:text-[9px] text-[#b68d40] uppercase tracking-wider font-semibold mb-0.5">
-                            {relProduct.brand || "Château d'art"}
+                            {relProduct.brand || "Souha Meubles"}
                           </p>
                           <h3 className="text-[10px] md:text-xs font-bold text-white line-clamp-2 leading-snug">
                             {relProduct.name}

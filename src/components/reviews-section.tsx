@@ -272,7 +272,7 @@ export function ReviewsSection() {
     >
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* ══════════════════════════════════════════════════════════════════════
+        {/* ═════════════════════════════════════════════════════════════════��════
             DESKTOP VIEW: EXACT LIVORA PIXEL-BY-PIXEL ARCHITECTURE
             Both left (chair) and right (review) are fully mouse draggable & swipable!
             ══════════════════════════════════════════════════════════════════════ */}
@@ -471,7 +471,7 @@ export function ReviewsSection() {
 
           <div className="text-center mt-8">
             <a
-              href="https://www.google.com/maps/place/Ch%C3%A2teau+D'Art+-+meubles/@36.7083703,3.0600586,17z/data=!4m8!3m7!1s0x128fad5fae229a89:0xa8afd38ca1b6e44f!8m2!3d36.7083703!4d3.0626335!9m1!1b1!16s%2Fg%2F11gsn14yk8"
+              href="https://www.google.com/maps/place/Souha+meubles+(+ain+naadja+)/@36.7113954,3.0471574,14z/data=!4m10!1m2!2m1!1ssouha+meubles!3m6!1s0x128fad003ac3e5f7:0x78d7b82d1de54df1!8m2!3d36.7113954!4d3.0852662!15sCg1zb3VoYSBtZXVibGVzkgEPZnVybml0dXJlX3N0b3Jl4AEA!16s%2Fg%2F11vt05gzhg?entry=ttu"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs font-sora text-[#b68d40] hover:underline"

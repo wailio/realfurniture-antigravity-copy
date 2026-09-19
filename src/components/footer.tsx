@@ -9,7 +9,7 @@ export function Footer() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
   const handleSubscribe = (e: React.FormEvent) => { e.preventDefault(); if (!email.trim()) return; setSubscribed(true); setEmail(''); };
-  const mapSrc = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.5906046037494!2d3.060058575713971!3d36.70837457287061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad5fae229a89%3A0xa8afd38ca1b6e44f!2sCh%C3%A2teau%20D\u0027Art%20-%20meubles!5e0!3m2!1sfr!2sdz!4v1789588881010!5m2!1sfr!2sdz';
+  const mapSrc = 'https://www.google.com/maps?q=Souha+Meubles+Ain+Naadja+Alger&output=embed';
   return (
     <footer className='bg-[#0A0B0C] text-[#B7BBC0] font-sora border-t border-white/10'>
       {/* ── MOBILE FOOTER ── */}
@@ -65,7 +65,7 @@ export function Footer() {
           
         </div>
         <div className='px-5 py-4 flex flex-col items-center gap-2 text-[10px] text-[#71717A] text-center'>
-          <p>&copy; 2026 Chateau d&apos;art. Tous droits reserves.</p>
+          <p>&copy; 2026 Souha Meubles. Tous droits reserves.</p>
           <div className='flex gap-4'>
             <Link href='/about' className='hover:text-white'>Mentions legales</Link>
             <Link href='/contact' className='hover:text-white'>Confidentialite</Link>
@@ -85,7 +85,7 @@ export function Footer() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.1fr_1.1fr_0.9fr_1fr] gap-8'>
             <div className='bg-[#121316] p-8 border border-white/10 flex flex-col justify-between'>
-              <div><h3 className='text-white font-fraunces text-xl font-light mb-4'>L&apos;Atelier &amp; Showroom</h3><p className='text-xs md:text-sm text-[#A1A1AA] leading-relaxed mb-6'>Chaque creation Chateau d&apos;art est concue pour traverser le temps. Visitez notre showroom ou contactez nos conseillers.</p></div>
+              <div><h3 className='text-white font-fraunces text-xl font-light mb-4'>L&apos;Atelier &amp; Showroom</h3><p className='text-xs md:text-sm text-[#A1A1AA] leading-relaxed mb-6'>Chaque creation Souha Meubles est concue pour traverser le temps. Visitez notre showroom ou contactez nos conseillers.</p></div>
               <div className='space-y-2.5 text-xs text-[#D1D5DB] border-t border-white/10 pt-4'>
                 <div className='flex items-center gap-2'><Phone size={14} className='text-[#b68d40]' /><a href='tel:213770392359' className='hover:text-white font-semibold'>0770 39 23 59</a></div>
                 <div className='flex items-center gap-2'><Mail size={14} className='text-[#b68d40]' /><a href='mailto:info@souhameuble.com' className='hover:text-white'>info@souhameuble.com</a></div>
@@ -113,7 +113,7 @@ export function Footer() {
             </div>
           </div>
           <div className='mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-[#71717A] gap-4'>
-            <p>&copy; 2026 Chateau d&apos;art. Tous droits reserves.</p>
+            <p>&copy; 2026 Souha Meubles. Tous droits reserves.</p>
             <div className='flex gap-6'><Link href='/about' className='hover:text-white'>Mentions legales</Link><Link href='/contact' className='hover:text-white'>Confidentialite</Link><Link href='/contact' className='hover:text-white'>Service Client</Link></div>
           </div>
         </div>

@@ -18,7 +18,7 @@ export default function AboutPage() {
             <span>Maison de Haute Création</span>
           </div>
           <h1 className="font-fraunces font-light text-3xl md:text-6xl lg:text-7xl text-white tracking-tight mb-4 md:mb-6">
-            À Propos de Château d&apos;art
+            À Propos de Souha Meubles
           </h1>
           <div className="flex justify-center w-full mb-8">
             <svg width="200" height="2" viewBox="0 0 200 2" fill="none" xmlns="http://www.w3.org/2000/svg" className="heading-underline">
@@ -43,7 +43,7 @@ export default function AboutPage() {
                 L&apos;Art de Vivre Réinventé
               </h2>
               <p className="font-sora text-[#B7BBC0] text-xs md:text-base leading-relaxed">
-                Chez <strong className="text-white">Château d&apos;art</strong>, nous concevons le mobilier comme l&apos;âme d&apos;un espace intérieur. Chaque pièce est pensée comme une composition architecturale alliant confort absolu, durabilité des matériaux et pureté esthétique.
+                Chez <strong className="text-white">Souha Meubles</strong>, nous concevons le mobilier comme l&apos;âme d&apos;un espace intérieur. Chaque pièce est pensée comme une composition architecturale alliant confort absolu, durabilité des matériaux et pureté esthétique.
               </p>
               <p className="font-sora text-[#B7BBC0] text-xs md:text-base leading-relaxed">
                 Du bois massif séché aux velours et bouclettes haut de gamme, nos maîtres ébénistes et tapissiers façonnent chaque modèle avec un soin minutieux. Nous refusons l&apos;uniformité pour privilégier l&apos;émotion et la personnalisation.
@@ -54,7 +54,7 @@ export default function AboutPage() {
           <LuxuryReveal variant="right" delay={200}>
             <div className="flex items-center justify-center w-full py-4">
               <img
-                src="/images/chateau-dart-emblem.png"
+                src="/logo.png"
                 alt="Souha Meubles - Votre Maison de Luxe"
                 className="w-full max-w-[540px] h-auto object-contain transition-transform duration-700 hover:scale-105"
               />
@@ -141,13 +141,13 @@ export default function AboutPage() {
                 Notre Histoire
               </h2>
               <p className="font-sora text-[#B7BBC0] text-xs md:text-base leading-relaxed">
-                Née de l&apos;amour des belles matières et du design sculptural, <strong className="text-white">Château d&apos;art</strong> s&apos;est développée avec une conviction claire: offrir des meubles d&apos;un raffinement international tout en restant proche des besoins de nos clients.
+                Née de l&apos;amour des belles matières et du design sculptural, <strong className="text-white">Souha Meubles</strong> s&apos;est développée avec une conviction claire: offrir des meubles d&apos;un raffinement international tout en restant proche des besoins de nos clients.
               </p>
               <p className="font-sora text-[#B7BBC0] text-xs md:text-base leading-relaxed">
                 Nous avons continuellement perfectionné nos processus, sélectionné des partenaires de premier ordre et développé un réseau de livraison couvrant l&apos;ensemble du territoire national.
               </p>
               <p className="font-sora text-[#B7BBC0] text-xs md:text-base leading-relaxed">
-                Aujourd&apos;hui, Château d&apos;art habille salons, chambres et réceptions d&apos;hôtels avec une élégance intemporelle, où le graphite mat et les touches d&apos;or célèbrent l&apos;harmonie.
+                Aujourd&apos;hui, Souha Meubles habille salons, chambres et réceptions d&apos;hôtels avec une élégance intemporelle, où le graphite mat et les touches d&apos;or célèbrent l&apos;harmonie.
               </p>
             </div>
           </LuxuryReveal>

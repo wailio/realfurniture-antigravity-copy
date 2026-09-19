@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
           phone,
           subject,
           message,
-          source: "Château d'art Website",
+          source: "Souha Meubles Website",
           timestamp: new Date().toISOString(),
         }),
       });

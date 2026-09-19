@@ -141,7 +141,7 @@ export default function HomePage() {
             style={{ animationDelay: '300ms', animationFillMode: 'both' }}
           >
             <p className="font-sora text-xs md:text-base text-white/80 leading-relaxed">
-              Matières nobles, proportions sculpturales et finitions artisanales pensées pour sublimer vos espaces de vie.
+              Chez Souha Meubles vous trouverez des produits premiers main garantie et des promotions à tout moment.
             </p>
           </div>
 
