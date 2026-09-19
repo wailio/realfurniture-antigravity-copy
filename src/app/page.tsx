@@ -76,19 +76,11 @@ export default function HomePage() {
       {/* ── Section 1: Cinematic Hero with Video Background ── */}
       <section className="relative w-full h-[600px] md:h-[750px] lg:h-[880px] overflow-hidden flex items-center justify-center">
         {/* Background Video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          onError={(event) => {
-            event.currentTarget.style.display = "none"
-          }}
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/bgvideo.mp4" type="video/mp4" />
-        </video>
+        <img
+        src="/images/contact-hero.jpg"
+        alt="Collection de mobilier Souha Meubles"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
 
         {/* Ambient Dark Overlay for Editorial Contrast */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0E0F10]/70 via-[#0E0F10]/50 to-[#0E0F10] z-10 pointer-events-none" />

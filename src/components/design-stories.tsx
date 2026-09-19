@@ -17,7 +17,7 @@ interface StoryItem {
   id: string;
   name: string;
   handle: string;
-  video: string;
+  image: string;
   icon: React.ComponentType<{ className?: string }>;
   link: string;
 }
@@ -27,7 +27,7 @@ const stories: StoryItem[] = [
     id: 'instagram',
     name: 'Instagram',
     handle: '@souha_meubles',
-    video: '/videos/instagram-vd.mp4',
+    image: '/products/salon/can1.jpg',
     icon: Instagram,
     link: 'https://www.instagram.com/souha_meubles/',
   },
@@ -35,7 +35,7 @@ const stories: StoryItem[] = [
     id: 'facebook',
     name: 'Facebook',
     handle: '@souhacars',
-    video: '/videos/facebook-vd.mp4',
+    image: '/products/salle/sl1.jpg',
     icon: Facebook,
     link: 'https://www.facebook.com/souhacars',
   },
@@ -43,7 +43,7 @@ const stories: StoryItem[] = [
     id: 'tiktok',
     name: 'TikTok',
     handle: '@souha.meubles',
-    video: '/videos/tiktok-vd.mp4',
+    image: '/products/chambre/ch1.jpg',
     icon: TikTokIcon,
     link: 'https://www.tiktok.com/@souha.meubles',
   },
@@ -86,17 +86,9 @@ export function DesignStories() {
                     aria-label={`Voir nos créations sur ${story.name}`}
                     className="story-item group relative block h-[400px] sm:h-[450px] lg:h-[510px] w-full rounded-[24px] overflow-hidden border border-white/10 hover:border-[#b68d40]/60 transition-all duration-500 shadow-2xl bg-[#141518]"
                   >
-                    {/* Background Video */}
-                    <video
-                      src={story.video}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      preload="metadata"
-                      onError={(event) => {
-                        event.currentTarget.style.display = "none"
-                      }}
+                    <img
+                      src={story.image}
+                      alt={`${story.name} — inspirations Souha Meubles`}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
                     />
 
