@@ -96,6 +96,23 @@ function ContactContent() {
     e.preventDefault();
     setLoading(true);
 
+    const whatsappMessage = [
+      'Bonjour Souha Meubles, nouvelle demande de contact :',
+      `Nom : ${formData.name}`,
+      `Téléphone : ${formData.phone}`,
+      `Email : ${formData.email}`,
+      `Sujet : ${formData.subject || 'Non précisé'}`,
+      `Message : ${formData.message}`,
+    ].join('\\n');
+    const whatsappWindow = window.open(
+      `https://wa.me/213770392359?text=${encodeURIComponent(whatsappMessage)}`,
+      '_blank',
+      'noopener,noreferrer',
+    );
+    if (whatsappWindow) {
+      whatsappWindow.opener = null;
+    }
+
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -228,7 +245,7 @@ function ContactContent() {
                   </div>
                 </div>
                 <a 
-                  href="https://wa.me/213561719100" 
+                  href="https://wa.me/213770392359" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="interactive-tap px-3.5 py-2 bg-[#25D366] hover:bg-[#20bd5a] text-white text-[10px] md:text-xs font-bold rounded-sm uppercase tracking-wider flex items-center gap-1.5 flex-shrink-0 transition-colors shadow-sm"
