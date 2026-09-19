@@ -81,6 +81,10 @@ export default function HomePage() {
           loop
           muted
           playsInline
+          preload="metadata"
+          onError={(event) => {
+            event.currentTarget.style.display = "none"
+          }}
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/bgvideo.mp4" type="video/mp4" />
